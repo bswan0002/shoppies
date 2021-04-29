@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+$font-family-sans-serif: "Roboto", sans-serif;
+
+$body-bg: #fbf7ed;
+
+$theme-colors: (
+  "primary": #008060,
+);
+
+$input-focus-border-color: #008060;
+
+$input-focus-box-shadow: none;
+
+$border-width: 2px;
+
+$link-color: #95bf47;
+
+$alert-padding-y: 0.3rem;
+
+@import "~bootstrap/scss/bootstrap.scss";
