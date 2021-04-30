@@ -44,3 +44,18 @@ footer {
   background-size: 100%;
   transition: background 0s;
 }
+
+.moviecard-details {
+  width: 100%;
+}
+
+.moviecard-title {
+  font-weight: 575;
+  font-size: 0.99rem;
+}
+
+.moviecard-year {
+  color: rgba(0, 0, 0, 0.514);
+  font-weight: 300;
+  font-size: 0.95rem;
+}

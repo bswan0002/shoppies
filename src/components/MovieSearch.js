@@ -89,7 +89,7 @@ const MovieSearch = () => {
       />
       <Row>
         {results.length > 0 && (
-          <Col className="mt-4" xs={12} sm={12} md={6}>
+          <Col className="mt-4" xs={12} sm={12} lg={6}>
             <ResultsList results={results} />
           </Col>
         )}
