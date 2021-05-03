@@ -1,10 +1,20 @@
-import { Card, Row, Col } from "react-bootstrap";
+import { Card } from "react-bootstrap";
+import { faImage } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ResultCard = ({ movie }) => {
   return (
-    <Card>
+    <Card className="resultcard">
       <div className="d-flex justify-content-start">
-        <img src={movie.Poster} alt="poster" style={{ width: "100px" }} />
+        {movie.Poster === "N/A" ? (
+          <FontAwesomeIcon
+            icon={faImage}
+            className="resultcard-imagenotfound ml-2"
+          />
+        ) : (
+          <img src={movie.Poster} alt="poster" style={{ height: "10rem" }} />
+        )}
+
         <div className="mt-2 moviecard-details">
           <div className="d-flex justify-content-between">
             <div className="ml-2">

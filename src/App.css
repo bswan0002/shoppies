@@ -59,3 +59,17 @@ footer {
   font-weight: 300;
   font-size: 0.95rem;
 }
+
+.resultslist {
+  max-height: 35rem;
+  overflow: auto;
+}
+
+.resultcard {
+  height: 10rem;
+}
+
+.resultcard-imagenotfound {
+  font-size: 5rem;
+  color: #004c3f;
+}

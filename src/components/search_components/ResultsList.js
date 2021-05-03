@@ -7,11 +7,21 @@ import ResultsPagination from "./ResultsPagination";
 const ResultsList = ({ results }) => {
   const [page, setPage] = useState(1);
 
+  const renderResultCards = () => {
+    return results[page - 1].map((movie) => <ResultCard movie={movie} />);
+  };
+
   return (
-    <div>
-      <ResultCard movie={results[0][0]} />
-      <ResultsPagination />
-    </div>
+    <>
+      <div className="resultslist">{renderResultCards()}</div>
+      <div className="d-flex justify-content-center mt-2">
+        <ResultsPagination
+          pageCount={results.length}
+          page={page}
+          setPage={setPage}
+        />
+      </div>
+    </>
   );
 };
 
