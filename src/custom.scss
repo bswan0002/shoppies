@@ -6,6 +6,7 @@ $body-bg: #fbf7ed;
 
 $theme-colors: (
   "primary": #008060,
+  "secondary": rgb(255, 196, 0),
 );
 
 $input-focus-border-color: #008060;
@@ -17,5 +18,7 @@ $border-width: 2px;
 $link-color: #95bf47;
 
 $alert-padding-y: 0.3rem;
+
+$popover-max-width: 400px;
 
 @import "~bootstrap/scss/bootstrap.scss";

@@ -17,6 +17,7 @@ const MovieSearch = () => {
   const [showFailedSearch, setShowFailedSearch] = useState(false);
   const [successfulSearchTitle, setSuccessfulSearchTitle] = useState("");
   const [failedSearchTitle, setFailedSearchTitle] = useState("");
+  const [nominations, setNominations] = useState([]);
   const searchProgress = useTrait(0);
 
   const handleResponses = (responses) => {
@@ -65,7 +66,7 @@ const MovieSearch = () => {
   return (
     <Container className="mt-4">
       <Row className="d-flex justify-content-between">
-        <h1 className="moviesearch-header">The Shoppies</h1>
+        <h1 className="darkgreen">The Shoppies</h1>
         <FailedSearchAlert
           title={failedSearchTitle}
           showFailedSearch={showFailedSearch}
@@ -90,12 +91,21 @@ const MovieSearch = () => {
       <Row>
         {results.length > 0 && (
           <Col className="mt-4" xs={12} sm={12} lg={6}>
-            <ResultsList results={results} />
+            <ResultsList
+              results={results}
+              nominations={nominations}
+              setNominations={setNominations}
+            />
           </Col>
         )}
-        <Col className="mt-4">
-          <NominationsList />
-        </Col>
+        {nominations.length > 0 && (
+          <Col className="mt-4">
+            <NominationsList
+              nominations={nominations}
+              setNominations={setNominations}
+            />
+          </Col>
+        )}
       </Row>
     </Container>
   );

@@ -4,8 +4,18 @@
   flex: 1 0 auto;
 }
 
-h1 {
+h1,
+h3 {
   font-family: "Fira Sans", sans-serif;
+  color: #004c3f;
+}
+
+.gold {
+  color: gold;
+}
+
+.darkgreen {
+  color: #004c3f;
 }
 
 footer {
@@ -24,11 +34,7 @@ footer {
 
 .topbar {
   background-image: linear-gradient(#95bf47, #fbf7ed);
-  height: 6em;
-}
-
-.moviesearch-header {
-  color: #004c3f;
+  height: 5em;
 }
 
 .ripple {
@@ -46,12 +52,12 @@ footer {
 }
 
 .moviecard-details {
+  height: 10rem;
   width: 100%;
 }
 
 .moviecard-title {
-  font-weight: 575;
-  font-size: 0.99rem;
+  /* font-weight: 575; */
 }
 
 .moviecard-year {
@@ -61,7 +67,7 @@ footer {
 }
 
 .resultslist {
-  max-height: 35rem;
+  max-height: 33rem;
   overflow: auto;
 }
 
@@ -70,6 +76,13 @@ footer {
 }
 
 .resultcard-imagenotfound {
-  font-size: 5rem;
+  font-size: 7.5rem;
   color: #004c3f;
+}
+
+.resultcard-plot {
+  height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
