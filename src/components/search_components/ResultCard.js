@@ -66,7 +66,12 @@ const ResultCard = ({ movie, nominations, setNominations }) => {
             <p className="mr-2">{getImdbRating()}</p>
           </div>
           <div className="mb-2 mr-2 d-flex justify-content-between">
-            <OverlayTrigger trigger="click" placement="top" overlay={popover}>
+            <OverlayTrigger
+              trigger={["hover", "focus"]}
+              delay={{ hide: 300 }}
+              placement="top"
+              overlay={popover}
+            >
               <div>
                 <Button>More Details</Button>
               </div>

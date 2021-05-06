@@ -13,9 +13,14 @@ const ResultsList = ({ nominations, setNominations }) => {
       return (
         <ListGroup.Item key={nomination + i}>
           <div className="d-flex justify-content-between">
-            {nomination.Title}
+            <p style={{ paddingTop: "1rem" }}>
+              {nomination.Title}
+              <span className="moviecard-year"> ({nomination.Year})</span>
+            </p>
+
             <Button
-              className="btn-danger"
+              className="btn-danger mh-40"
+              style={{ marginTop: "0.5rem" }}
               onClick={() => handleRemove(nomination.imdbID)}
             >
               Remove

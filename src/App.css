@@ -56,10 +56,6 @@ footer {
   width: 100%;
 }
 
-.moviecard-title {
-  /* font-weight: 575; */
-}
-
 .moviecard-year {
   color: rgba(0, 0, 0, 0.514);
   font-weight: 300;
@@ -85,4 +81,8 @@ footer {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.mh-40 {
+  max-height: 40px;
 }
