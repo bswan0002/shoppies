@@ -1,16 +1,17 @@
 // Libraries
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 // Components
-import SearchCard from "./search_components/SearchCard";
+import MovieSearch from "./search_components/MovieSearch";
 import ResultsList from "./search_components/ResultsList";
 import NominationsList from "./search_components/NominationsList";
 import FailedSearchAlert from "./search_components/FailedSearchAlert";
 import SuccessfulSearchAlert from "./search_components/SuccessfulSearchAlert";
+import Celebration from "./search_components/Celebration";
 // Custom Hooks
 import useTrait from "../custom_hooks/useTrait";
 
-const MovieSearch = () => {
+const Shoppies = () => {
   const [title, setTitle] = useState("");
   const [results, setResults] = useState([]);
   const [showSuccessfulSearch, setShowSuccessfulSearch] = useState(false);
@@ -18,7 +19,14 @@ const MovieSearch = () => {
   const [successfulSearchTitle, setSuccessfulSearchTitle] = useState("");
   const [failedSearchTitle, setFailedSearchTitle] = useState("");
   const [nominations, setNominations] = useState([]);
+  const [showCelebration, setShowCelebration] = useState(false);
   const searchProgress = useTrait(0);
+
+  useEffect(() => {
+    if (nominations.length === 5) {
+      setShowCelebration(true);
+    }
+  }, [nominations]);
 
   const handleResponses = (responses) => {
     if (responses.length === 0) {
@@ -65,6 +73,10 @@ const MovieSearch = () => {
 
   return (
     <Container className="mt-4">
+      <Celebration
+        showCelebration={showCelebration}
+        setShowCelebration={setShowCelebration}
+      />
       <Row className="d-flex justify-content-between">
         <h1 className="darkgreen">The Shoppies</h1>
         <FailedSearchAlert
@@ -82,7 +94,7 @@ const MovieSearch = () => {
           setShowSuccessfulSearch={setShowSuccessfulSearch}
         />
       </Row>
-      <SearchCard
+      <MovieSearch
         title={title}
         setTitle={setTitle}
         handleSubmit={handleSubmit}
@@ -111,4 +123,4 @@ const MovieSearch = () => {
   );
 };
 
-export default MovieSearch;
+export default Shoppies;

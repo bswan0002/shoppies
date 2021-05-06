@@ -2,7 +2,7 @@
 import "./App.css";
 import "./custom.scss";
 // Components
-import MovieSearch from "./components/MovieSearch";
+import Shoppies from "./components/Shoppies";
 import TopBar from "./components/TopBar";
 import Footer from "./components/Footer";
 
@@ -11,7 +11,7 @@ const App = () => {
     <>
       <div className="body">
         <TopBar />
-        <MovieSearch />;
+        <Shoppies />;
       </div>
       <Footer />
     </>

@@ -1,4 +1,4 @@
-import React from "react";
+// Libraries
 import { Container, Row } from "react-bootstrap";
 import {
   faReact,

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Components
 import SearchProgressBar from "./SearchProgressBar";
 
-const SearchCard = ({ title, setTitle, handleSubmit, searchProgress }) => {
+const MovieSearch = ({ title, setTitle, handleSubmit, searchProgress }) => {
   return (
     <Card className="mt-4">
       <Card.Body>
@@ -36,4 +36,4 @@ const SearchCard = ({ title, setTitle, handleSubmit, searchProgress }) => {
   );
 };
 
-export default SearchCard;
+export default MovieSearch;
