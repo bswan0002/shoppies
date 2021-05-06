@@ -2,12 +2,12 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 // Components
-import MovieSearch from "./search_components/MovieSearch";
-import ResultsList from "./search_components/ResultsList";
-import NominationsList from "./search_components/NominationsList";
-import FailedSearchAlert from "./search_components/FailedSearchAlert";
-import SuccessfulSearchAlert from "./search_components/SuccessfulSearchAlert";
-import Celebration from "./search_components/Celebration";
+import MovieSearch from "./shoppies_components/MovieSearch";
+import ResultsList from "./shoppies_components/ResultsList";
+import NominationsList from "./shoppies_components/NominationsList";
+import FailedSearchAlert from "./shoppies_components/FailedSearchAlert";
+import SuccessfulSearchAlert from "./shoppies_components/SuccessfulSearchAlert";
+import Celebration from "./shoppies_components/Celebration";
 // Custom Hooks
 import useTrait from "../custom_hooks/useTrait";
 
