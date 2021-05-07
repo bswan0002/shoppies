@@ -21,11 +21,30 @@ h3 {
 footer {
   color: white;
   flex-shrink: 0;
-  margin-top: 100px;
   width: 100%;
-  height: 200px;
-  line-height: 40px;
   background-color: #004c3f;
+  margin-top: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    height: 200px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (min-width: 540px) and (max-width: 768px) {
+  footer {
+    height: 250px;
+    line-height: 35px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  footer {
+    height: 275px;
+    line-height: 30px;
+  }
 }
 
 .footer-byline {

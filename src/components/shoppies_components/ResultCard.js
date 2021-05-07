@@ -8,11 +8,11 @@ const ResultCard = ({ movie, nominations, setNominations }) => {
 
   useEffect(() => {
     fetch(
-      `http://www.omdbapi.com/?type=movie&i=${movie.imdbID}&apikey=${process.env.REACT_APP_OMDB_API_KEY}`
+      `https://www.omdbapi.com/?type=movie&i=${movie.imdbID}&apikey=${process.env.REACT_APP_OMDB_API_KEY}`
     )
       .then((res) => res.json())
       .then((data) => setMovieDetails(data));
-  }, []);
+  }, [movie.imdbID]);
 
   const getImdbRating = () => {
     let foundIndex = movieDetails.Ratings?.findIndex(

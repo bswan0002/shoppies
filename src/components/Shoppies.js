@@ -44,7 +44,7 @@ const Shoppies = () => {
 
   const paginatedFetch = (page = 1, responses = []) => {
     fetch(
-      `http://www.omdbapi.com/?type=movie&s=${title}&page=${page}&apikey=${process.env.REACT_APP_OMDB_API_KEY}`
+      `https://www.omdbapi.com/?type=movie&s=${title}&page=${page}&apikey=${process.env.REACT_APP_OMDB_API_KEY}`
     )
       .then((res) => {
         return res.ok && res.json();
